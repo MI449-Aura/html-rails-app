@@ -3,100 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TITLE</title>
-    <link rel="stylesheet" href="screen.css">
+    <title>Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <nav class="menu">
-        <ul class="nav-left">
+<body class="bg-orange-50 text-stone-800 font-sans">
+    <nav class="flex justify-between items-center px-8 py-4 bg-white border-b border-stone-200 shadow-sm">
+        <ul class="flex items-center gap-6">
             <li>
-                <a href="index.html"><div class="logo"><img src="/images/logo.svg" alt="" title="Home"></div></a>
+                <a href="index.html">
+                    <div class="w-10 h-10"><img src="logo.svg" alt="" title="Home" class="w-full h-full object-contain"></div>
+                </a>
             </li>
-            <li><a href="recipes.html" title="Recipes">Recipes</a></li>
-            <li><a href="disorders.html" title="Disorders">Disorders</a></li>
-            <li><a href="resources.html" title="Resources">Resources</a></li>
-            <li><a href="about.html" title="About">About</a></li>
-
+            <li><a href="recipes.html" class="text-stone-600 hover:text-amber-600 transition-colors">Recipes</a></li>
+            <li><a href="disorders.html" class="text-stone-600 hover:text-amber-600 transition-colors">Disorders</a></li>
+            <li><a href="resources.html" class="text-stone-600 hover:text-amber-600 transition-colors">Resources</a></li>
+            <li><a href="about.html" class="text-stone-600 hover:text-amber-600 transition-colors">About</a></li>
         </ul>
-        <ul class="nav-right">
-            <li><button>Adult Mode</button></li>
-            <li><button>Kids Mode</button></li>
+        <ul class="flex gap-3">
+            <li><button class="px-4 py-2 rounded-full border border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white transition-colors text-sm font-medium">Adult Mode</button></li>
+            <li><button class="px-4 py-2 rounded-full bg-amber-600 text-white hover:bg-amber-700 transition-colors text-sm font-medium">Kids Mode</button></li>
         </ul>
     </nav>
 
-    <div class="misson-section">
-        <h1 class="header">Our Misson</h1>
-        <p class="mission-statement">
-            The goal of our site is to make a website focused around safe and healthy eating habits. It contains easy recipes and foods to eat to give people healthy recommendations without needing to research themselves. It also holds information on eating disorders and ways to promote good eating habits.
-        </p>
-    </div>
-
-    <div class="recipe-section">
-        <p class="before-header">
-            Want to learn more? Click on any box below!
-        </p>
-
-        <h2 class="category">
-            Recipe Categories
-        </h2>
-
-        <div class="categories">
-            <h2 class="category-name">
-                Name
-            </h2>
-            <a class="category-img" href=""><img src=".jpg" alt=""></a>
-        </div>
-
-        <div class="categories">
-            <h2 class="category-name">
-                Name
-            </h2>
-            <a class="category-img" href=""><img src=".jpg" alt=""></a>
-        </div>
-
-        <div class="categories">
-            <h2 class="category-name">
-                Name
-            </h2>
-            <a class="category-img" href=""><img src=".jpg" alt=""></a>
-        </div>
-
-        <div class="categories">
-            <h2 class="category-name">
-                Name
-            </h2>
-            <a class="category-img" href=""><img src=".jpg" alt=""></a>
-        </div>
-
-        <div class="categories">
-            <h2 class="category-name">
-                Name
-            </h2>
-            <a class="category-img" href=""><img src=".jpg" alt=""></a>
-        </div>
-
-        <div class="categories">
-            <h2 class="category-name">
-                Name
-            </h2>
-            <a class="category-img" href=""><img src=".jpg" alt=""></a>
-        </div>
-    </div>
-
-    <div class="ed-section">
-        <h2 class="category">
-            Eating Disorders
-        </h2>
-
-        <div class="categories">
-            <p class="mission-statement">
-                INFO ABOUT EDs
+    <div id="adult-mode">
+        <div class="max-w-3xl mx-auto text-center py-16 px-6">
+            <h1 class="text-4xl font-serif font-bold mb-6">Our Mission</h1>
+            <p class="text-stone-600 leading-relaxed text-lg">
+                The goal of our site is to make a website focused around safe and healthy eating habits. It contains easy recipes and foods to eat to give people healthy recommendations without needing to research themselves. It also holds information on eating disorders and ways to promote good eating habits.
             </p>
-            <h2 class="category-name">
-                Name
-            </h2>
-            <a class="category-img" href=""><img src=".jpg" alt=""></a>
         </div>
+
+        <div class="max-w-5xl mx-auto px-6 pb-16">
+            <p class="text-center text-stone-500 mb-3 text-sm uppercase tracking-widest">Want to learn more? Click on any box below!</p>
+            <h2 class="text-3xl font-serif text-center mb-8">Recipe Categories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer">
+                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
+                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer">
+                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
+                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer">
+                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
+                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer">
+                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
+                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer">
+                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
+                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer">
+                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
+                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-amber-50 border-t border-amber-100 py-16 px-6">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-serif text-center mb-8">Eating Disorders</h2>
+                <p class="text-stone-600 leading-relaxed mb-8">
+                    Eating disorders are serious but treatable mental health conditions characterized by unhealthy relationships with food, eating, and body image. They affect people of all ages, genders, and backgrounds, and are never a choice or a reflection of character. If you or someone you know is struggling, please reach out to a healthcare professional or contact the National Alliance for Eating Disorders helpline for support.
+                </p>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer w-48 mx-auto">
+                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
+                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+                </div>
+            </div>
+        </div>
+
     </div>
+
+    <div id="kids-mode" class="hidden">
+        <div class="max-w-3xl mx-auto text-center py-16 px-6">
+            <h1 class="text-4xl font-serif font-bold mb-6">Our Mission</h1>
+            <p class="text-stone-600 leading-relaxed text-lg">
+                Hi there! Welcome to our website. The goal of this website is to teach you about eating balanced and delicious meals. The most important thing to remember that food is fuel!
+            </p>
+        </div>
+        <div class="max-w-5xl mx-auto px-6 pb-16">
+            <p class="text-center text-stone-500 mb-3 text-sm uppercase tracking-widest">Want to learn more? Click on any box below!</p>
+            <h2 class="text-3xl font-serif text-center mb-8">Recipe Categories</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer">
+                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
+                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer">
+                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
+                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer">
+                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
+                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer">
+                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
+                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer">
+                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
+                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+                </div>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer">
+                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
+                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-amber-50 border-t border-amber-100 py-16 px-6">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-serif text-center mb-8">Eating Disorders</h2>
+                <p class="text-stone-600 leading-relaxed mb-8">
+                    Sometimes, people can develop confusing thoughts and feelings about food and their bodies that make it hard for them to eat in a healthy way. This is called an eating disorder, and it's not something they choose to think. Just like getting sick or breaking a bone, eating disorders are a health problem. Some people might not eat enough while others eat too much then feel bad afterwards. Good news though, eating disorders can be treated with the help from doctors, counselors, and a loving support system. Remember it is always ok to talk to a trusted grown up if you or someone you love is struggling with these thoughts. You are never alone and you are beautiful.
+                </p>
+                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer w-48 mx-auto">
+                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
+                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="utilities.js"></script>
+
 </body>
 </html>
