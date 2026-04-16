@@ -4,64 +4,202 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Disorders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        helveticaNow: ['"Helvetica Now Text"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .site-nav {
+            background-color: #283618;
+            color: #FEFAE0;
+        }
+
+        .site-title {
+            font-family: "Helvetica Now Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        body.kids-theme {
+            background-color: #FF9696;
+            color: #ffffff;
+            font-family: "Bubblegum Sans", "Comic Sans MS", "Trebuchet MS", cursive;
+        }
+
+        body.kids-theme .site-nav {
+            background-color: #600000;
+        }
+
+        body.kids-theme .site-title {
+            font-family: "Helvetica Now Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            -webkit-text-stroke: 0;
+            paint-order: fill;
+        }
+
+        body.kids-theme .nav-link,
+        body.kids-theme .mode-label,
+        body.kids-theme .page-content :is(h1, h2, h3, p, a, li, button, span) {
+            -webkit-text-stroke: 4px #000;
+            paint-order: stroke fill;
+            text-shadow:
+                0 4px 0 rgba(0, 0, 0, 0.99),
+                0 0 34px rgba(0, 0, 0, 0.99);
+        }
+
+        body.kids-theme .nav-link,
+        body.kids-theme .mode-label {
+            font-size: 1.2rem;
+        }
+
+        body.kids-theme .page-content {
+            font-size: 1.15rem;
+            color: #ffffff;
+        }
+
+        body.kids-theme .page-content :is(p, li, a, span, button) {
+            letter-spacing: 0.08em;
+        }
+
+        body.kids-theme .below-hero-copy :is(p, li, a, span, button) {
+            font-size: 35px;
+        }
+
+        body.kids-theme #kids-mode .kids-heading {
+            font-size: 70px;
+            line-height: 1.05;
+        }
+
+        body.kids-theme .kids-grid-lines {
+            background-color: #ff9090;
+            background-image:
+                linear-gradient(to right, rgba(255, 255, 255, 0.85) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.85) 1px, transparent 1px);
+            background-size: 42px 42px;
+        }
+
+        .below-hero-copy :is(p, li, a, span, button) {
+            font-family: "Sassoon Primary", "Sassoon Primary Std", "Helvetica Now Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        .content-box {
+            border-radius: 1rem;
+            border: 1px solid rgba(40, 54, 24, 0.2);
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+            padding: 1.5rem;
+        }
+
+        body.kids-theme .content-box {
+            border-color: rgba(255, 255, 255, 0.75);
+            background-color: rgba(126, 0, 0, 0.45);
+        }
+
+        .disorders-note {
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        body.kids-theme .below-hero-copy p.disorders-note {
+            font-size: 1rem;
+            line-height: 1.75;
+            -webkit-text-stroke: 0;
+            text-shadow: none;
+        }
+    </style>
 </head>
-<body class="bg-orange-50 text-stone-800 font-sans">
-    <nav class="flex justify-between items-center px-8 py-4 bg-white border-b border-stone-200 shadow-sm">
-        <ul class="flex items-center gap-6">
-            <li>
-                <a href="index.html">
-                    <div class="w-10 h-10"><img src="logo.svg" alt="" title="Home" class="w-full h-full object-contain"></div>
+<body class="min-h-screen bg-[#FEFAE0] text-[#283618] font-helveticaNow font-bold">
+    <nav id="site-nav" class="site-nav shadow-md">
+        <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-8">
+            <div class="flex items-center gap-4 sm:gap-6">
+                <a href="index.html" class="flex items-center gap-3" title="Home">
+                    <img src="assets/FoodLogo.png" alt="Home" class="h-11 w-11 object-contain">
+                    <span class="site-title text-lg tracking-wide sm:text-xl">NAME</span>
                 </a>
-            </li>
-            <li><a href="all-recipies.html" class="text-stone-600 hover:text-amber-600 transition-colors">Recipes</a></li>
-            <li><a href="disorders.html" class="text-stone-600 hover:text-amber-600 transition-colors">Disorders</a></li>
-            <li><a href="resources.html" class="text-stone-600 hover:text-amber-600 transition-colors">Resources</a></li>
-            <li><a href="about.html" class="text-stone-600 hover:text-amber-600 transition-colors">About</a></li>
-        </ul>
-        <ul class="flex gap-3">
-            <li><button class="px-4 py-2 rounded-full border border-amber-600 text-amber-600 hover:bg-amber-600 hover:text-white transition-colors text-sm font-medium">Adult Mode</button></li>
-            <li><button class="px-4 py-2 rounded-full bg-amber-600 text-white hover:bg-amber-700 transition-colors text-sm font-medium">Kids Mode</button></li>
-        </ul>
+                <ul class="hidden items-center gap-4 sm:flex lg:gap-6">
+                    <li><a href="all-recipies.html" class="nav-link mode-text text-base transition-opacity hover:opacity-80 sm:text-lg">Recipes</a></li>
+                    <li><a href="disorders.html" class="nav-link mode-text text-base transition-opacity hover:opacity-80 sm:text-lg">Disorders</a></li>
+                    <li><a href="resources.html" class="nav-link mode-text text-base transition-opacity hover:opacity-80 sm:text-lg">Resources</a></li>
+                    <li><a href="about.html" class="nav-link mode-text text-base transition-opacity hover:opacity-80 sm:text-lg">About</a></li>
+                </ul>
+            </div>
+
+            <div class="flex items-center gap-2 sm:gap-3">
+                <span id="adult-label" class="mode-label mode-text text-xs uppercase tracking-wide opacity-100 sm:text-sm">Adult</span>
+                <button
+                    id="mode-toggle"
+                    type="button"
+                    role="switch"
+                    aria-checked="false"
+                    aria-label="Toggle adult mode and kids mode"
+                    class="relative h-8 w-16 rounded-full border border-[#FEFAE0]/70 bg-lime-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#FEFAE0] focus:ring-offset-2 focus:ring-offset-[#283618]"
+                >
+                    <span id="mode-toggle-thumb" class="absolute left-1 top-1 h-6 w-6 rounded-full bg-[#FEFAE0] transition-transform duration-300"></span>
+                </button>
+                <span id="kids-label" class="mode-label mode-text text-xs uppercase tracking-wide opacity-60 sm:text-sm">Kids</span>
+            </div>
+        </div>
+
+        <div class="border-t border-[#FEFAE0]/20 px-4 pb-4 pt-3 sm:hidden">
+            <ul class="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
+                <li><a href="all-recipies.html" class="nav-link mode-text text-base transition-opacity hover:opacity-80">Recipes</a></li>
+                <li><a href="disorders.html" class="nav-link mode-text text-base transition-opacity hover:opacity-80">Disorders</a></li>
+                <li><a href="resources.html" class="nav-link mode-text text-base transition-opacity hover:opacity-80">Resources</a></li>
+                <li><a href="about.html" class="nav-link mode-text text-base transition-opacity hover:opacity-80">About</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <div id="adult-mode">
-        <div class="bg-amber-50 border-t border-amber-100 py-16 px-6">
-            <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-serif text-center mb-8">Eating Disorders</h2>
-                <p class="text-stone-600 leading-relaxed mb-8">
-                    Eating disorders are serious but treatable mental health conditions characterized by unhealthy relationships with food, eating, and body image. They affect people of all ages, genders, and backgrounds, and are never a choice or a reflection of character. If you or someone you know is struggling, please reach out to a healthcare professional or contact the National Alliance for Eating Disorders helpline for support.
-                </p>
-                <p class="text-stone-500 text-sm italic mb-6">
-                    Here is a short list on some common eating disorders
-                </p>
-                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer w-48 mx-auto">
-                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
-                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+    <div id="adult-mode" class="below-hero-copy page-content">
+        <section class="px-6 py-16">
+            <div class="mx-auto max-w-3xl">
+                <h2 class="mb-8 text-center text-3xl">Eating Disorders</h2>
+                <div class="content-box mb-6 text-center">
+                    <p class="leading-relaxed">
+                        Eating disorders are serious but treatable mental health conditions characterized by unhealthy relationships with food, eating, and body image. They affect people of all ages, genders, and backgrounds, and are never a choice or a reflection of character. If you or someone you know is struggling, please reach out to a healthcare professional or contact the National Alliance for Eating Disorders helpline for support.
+                    </p>
+                    <p class="disorders-note mt-6 italic text-[#283618]/80">
+                        Here is a short list on some common eating disorders.
+                    </p>
+                </div>
+                <div class="mx-auto w-48 cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-lg">
+                    <a href=""><img src=".jpg" alt="" class="h-40 w-full object-cover"></a>
+                    <h2 class="py-3 text-center">Name</h2>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 
-    <div id="kids-mode" class="hidden">
-        <div class="bg-amber-50 border-t border-amber-100 py-16 px-6">
-            <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-serif text-center mb-8">Eating Disorders</h2>
-                <p class="text-stone-600 leading-relaxed mb-8">
-                    Sometimes, people can develop confusing thoughts and feelings about food and their bodies that make it hard for them to eat in a healthy way. This is called an eating disorder, and it's not something they choose to think. Just like getting sick or breaking a bone, eating disorders are a health problem. Some people might not eat enough while others eat too much then feel bad afterwards. Good news though, eating disorders can be treated with the help from doctors, counselors, and a loving support system. Remember it is always ok to talk to a trusted grown up if you or someone you love is struggling with these thoughts. You are never alone and you are beautiful.
-                </p>
-                <p class="text-stone-500 text-sm italic mb-6">
-                    Here is a short list on some common eating disorders
-                </p>
-                <div class="rounded-2xl overflow-hidden shadow-md bg-white hover:shadow-lg transition-shadow cursor-pointer w-48 mx-auto">
-                    <a href=""><img src=".jpg" alt="" class="w-full h-40 object-cover"></a>
-                    <h2 class="text-center font-semibold py-3 text-stone-700">Name</h2>
+    <div id="kids-mode" class="hidden below-hero-copy page-content kids-grid-lines">
+        <section class="px-6 py-16">
+            <div class="mx-auto max-w-3xl">
+                <h2 class="kids-heading mb-8 text-center text-3xl">Eating Disorders</h2>
+                <div class="content-box mb-6 text-center">
+                    <p class="leading-relaxed">
+                        Sometimes, people can develop confusing thoughts and feelings about food and their bodies that make it hard for them to eat in a healthy way. This is called an eating disorder, and it is a health issue that can be treated with support from doctors, counselors, and trusted adults.
+                    </p>
+                    <p class="disorders-note mt-6 italic">
+                        Here is a short list on some common eating disorders.
+                    </p>
+                </div>
+                <div class="mx-auto w-48 cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-lg">
+                    <a href=""><img src=".jpg" alt="" class="h-40 w-full object-cover"></a>
+                    <h2 class="py-3 text-center">Name</h2>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 
     <script src="utilities.js"></script>
-
 </body>
 </html>
