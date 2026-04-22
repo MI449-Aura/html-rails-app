@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resources</title>
+    <title>Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
@@ -50,11 +50,11 @@
         body.kids-theme .nav-link,
         body.kids-theme .mode-label,
         body.kids-theme .page-content :is(h1, h2, h3, p, a, li, button, span) {
-            -webkit-text-stroke: 4px #000;
+            -webkit-text-stroke: 5px #000;
             paint-order: stroke fill;
             text-shadow:
                 0 4px 0 rgba(0, 0, 0, 0.99),
-                0 0 34px rgba(0, 0, 0, 0.99);
+                0 0px 34px rgba(0, 0, 0, 0.99);
         }
 
         body.kids-theme .nav-link,
@@ -75,9 +75,21 @@
             font-size: 35px;
         }
 
+        body.kids-theme #kids-mode .kids-hero-title,
         body.kids-theme #kids-mode .kids-heading {
             font-size: 70px;
             line-height: 1.05;
+        }
+
+        body.kids-theme #kids-mode .kids-text {
+            font-size: 35px;
+            line-height: 1.12;
+        }
+
+        body.kids-theme #kids-mode .hero-auth-button {
+            font-family: "Helvetica Now Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            -webkit-text-stroke: 0;
+            paint-order: fill;
         }
 
         body.kids-theme .kids-grid-lines {
@@ -148,90 +160,25 @@
         </div>
     </nav>
 
-    <div id="adult-mode" class="below-hero-copy page-content">
-        <section class="px-6 pb-8 pt-16">
-            <div class="mx-auto max-w-3xl">
-                <div class="content-box mb-8 text-center">
-                    <p class="leading-relaxed">
-                        If you or someone you know is struggling with an eating disorder, you are not alone and help is available. The National Alliance for Eating Disorders offers a helpline and therapist finder at
-                        <a href="https://www.allianceforeatingdisorders.com" class="underline decoration-2 underline-offset-2">www.allianceforeatingdisorders.com</a>.
-                        You can also reach the Crisis Text Line by texting NEDA to 741741 for immediate support.
-                    </p>
-                </div>
-            </div>
-        </section>
+    <div id="adult-mode" class="page-content">
 
-        <section class="px-6 pb-12">
-            <h2 class="mb-8 text-center text-3xl">Resources</h2>
-            <div class="mx-auto grid max-w-5xl grid-cols-2 gap-6 md:grid-cols-3">
-                <div class="cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                    <a href=""><img src=".jpg" alt="" class="h-40 w-full object-cover"></a>
-                    <h2 class="py-3 text-center">Name</h2>
-                </div>
-                <div class="cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                    <a href=""><img src=".jpg" alt="" class="h-40 w-full object-cover"></a>
-                    <h2 class="py-3 text-center">Name</h2>
-                </div>
-                <div class="cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                    <a href=""><img src=".jpg" alt="" class="h-40 w-full object-cover"></a>
-                    <h2 class="py-3 text-center">Name</h2>
-                </div>
-                <div class="cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                    <a href=""><img src=".jpg" alt="" class="h-40 w-full object-cover"></a>
-                    <h2 class="py-3 text-center">Name</h2>
-                </div>
-                <div class="cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                    <a href=""><img src=".jpg" alt="" class="h-40 w-full object-cover"></a>
-                    <h2 class="py-3 text-center">Name</h2>
-                </div>
-                <div class="cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                    <a href=""><img src=".jpg" alt="" class="h-40 w-full object-cover"></a>
-                    <h2 class="py-3 text-center">Name</h2>
-                </div>
-            </div>
-        </section>
+        <div class="below-hero-copy mx-auto max-w-3xl px-6 py-16 text-center">
+            <h2 class="mb-6 text-4xl">About Us</h2>
+            <p class="content-box text-lg leading-relaxed">
+                The goal of our site is to make a website focused around safe and healthy eating habits. It contains easy recipes and foods to eat to give people healthy recommendations without needing to research themselves. It also holds information on eating disorders and ways to promote good eating habits.
+            </p>
+        </div>
     </div>
 
-    <div id="kids-mode" class="hidden below-hero-copy page-content kids-grid-lines">
-        <section class="px-6 pb-8 pt-16">
-            <div class="mx-auto max-w-3xl">
-                <div class="content-box mb-8 text-center">
-                    <p class="leading-relaxed">
-                        If you or a friend are having scary thoughts about food or your body, tell a trusted grown-up like a parent, teacher, counselor, or doctor. Asking for help is brave, and caring adults can connect you with support.
-                    </p>
-                </div>
+    <div id="kids-mode" class="hidden page-content">
+        <div class="below-hero-copy kids-grid-lines">
+            <div class="mx-auto max-w-3xl px-6 py-16 text-center">
+                <h2 class="kids-heading mb-6 text-4xl">About Us</h2>
+                <p class="content-box kids-text text-lg leading-relaxed">
+                    Hi there! This website was made by students at Michigan State University. We wanted to talk more about healthy eating habits and eating a fun and balanced diet. We also wanted to talk about eating disorders and what they mean. They can be scary but remember asking for help is the bravest thing you or a friend can do. We all need food to survive and you are beautiful!
+                </p>
             </div>
-        </section>
 
-        <section class="px-6 pb-12">
-            <h2 class="kids-heading mb-8 text-center text-3xl">Resources</h2>
-            <div class="mx-auto grid max-w-5xl grid-cols-2 gap-6 md:grid-cols-3">
-                <div class="cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                    <a href=""><img src=".jpg" alt="" class="h-40 w-full object-cover"></a>
-                    <h2 class="py-3 text-center">Name</h2>
-                </div>
-                <div class="cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                    <a href=""><img src=".jpg" alt="" class="h-40 w-full object-cover"></a>
-                    <h2 class="py-3 text-center">Name</h2>
-                </div>
-                <div class="cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                    <a href=""><img src=".jpg" alt="" class="h-40 w-full object-cover"></a>
-                    <h2 class="py-3 text-center">Name</h2>
-                </div>
-                <div class="cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                    <a href=""><img src=".jpg" alt="" class="h-40 w-full object-cover"></a>
-                    <h2 class="py-3 text-center">Name</h2>
-                </div>
-                <div class="cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                    <a href=""><img src=".jpg" alt="" class="h-40 w-full object-cover"></a>
-                    <h2 class="py-3 text-center">Name</h2>
-                </div>
-                <div class="cursor-pointer overflow-hidden rounded-2xl bg-white shadow-md transition-shadow hover:shadow-lg">
-                    <a href=""><img src=".jpg" alt="" class="h-40 w-full object-cover"></a>
-                    <h2 class="py-3 text-center">Name</h2>
-                </div>
-            </div>
-        </section>
     </div>
 
     <script src="utilities.js"></script>
